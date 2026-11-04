@@ -1,0 +1,40 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "postgres",
+            "database": "contoso_100k",
+            "username": "postgres"
+        },
+        {
+            "connectionMethod": "Hostname and Token",
+            "catalog": "raw",
+            "previewLimit": 50,
+            "driver": "Databricks",
+            "name": "raw",
+            "host": "dbc-8f5dce39-3a7d.cloud.databricks.com",
+            "path": "/sql/1.0/warehouses/9bdfe68cb3d128ff"
+        },
+        {
+            "connectionMethod": "Hostname and Token",
+            "catalog": "prod",
+            "previewLimit": 50,
+            "driver": "Databricks",
+            "name": "prod",
+            "host": "dbc-8f5dce39-3a7d.cloud.databricks.com",
+            "path": "/sql/1.0/warehouses/9bdfe68cb3d128ff"
+        },
+        {
+            "connectionMethod": "Hostname and Token",
+            "catalog": "dev",
+            "previewLimit": 50,
+            "driver": "Databricks",
+            "name": "dev",
+            "host": "dbc-8f5dce39-3a7d.cloud.databricks.com",
+            "path": "/sql/1.0/warehouses/9bdfe68cb3d128ff"
+        }
+    ]
+}
