@@ -1,3 +1,4 @@
+
 models:
   - name: stg_job_postings
     description: >
@@ -38,8 +39,17 @@ models:
       - name: is_remote
         description: Indicates whether the job allows remote work.
 
-      - name: job_extensions
-        description: Additional attributes and details associated with the job posting.
+      - name: has_no_degree_mentioned
+        description: Indicates whether the job posting mentions that no degree is required.
+
+      - name: has_paid_time_off
+        description: Indicates whether the job posting offers paid time off.
+
+      - name: has_dental_insurance
+        description: Indicates whether the job posting offers dental insurance.
+
+      - name: has_health_insurance
+        description: Indicates whether the job posting offers health insurance.
 
       - name: search_time
         description: Timestamp when the job search was executed.
