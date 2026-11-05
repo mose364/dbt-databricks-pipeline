@@ -1,0 +1,70 @@
+models:
+  - name: stg_job_postings
+    description: >
+      One row per job posting per scrape day.
+      A job re-scraped across different days keeps every row.
+
+    columns:
+      - name: job_id
+        description: Unique identifier for each job posting.
+
+      - name: job_title
+        description: Title of the job posting.
+
+      - name: job_description
+        description: Description of the job posting.
+
+      - name: company_name
+        description: Name of the company posting the job.
+
+      - name: location
+        description: Location of the job posting.
+
+      - name: posted_date
+        description: Date the job was posted.
+
+      - name: scrape_date
+        description: Date the job posting was scraped.
+
+      - name: searched_at
+        description: Date or relative time when the job was originally posted.
+
+      - name: job_salary
+        description: Advertised salary or salary range for the job.
+
+      - name: job_schedule_type
+        description: Employment schedule such as full-time, part-time, or contract.
+
+      - name: is_remote
+        description: Indicates whether the job allows remote work.
+
+      - name: job_extensions
+        description: Additional attributes and details associated with the job posting.
+
+      - name: search_time
+        description: Timestamp when the job search was executed.
+
+      - name: search_date
+        description: Date when the job search was executed.
+
+      - name: search_term
+        description: Keyword or phrase used to search for job postings.
+
+      - name: search_location
+        description: Location parameter used during the job search.
+
+  - name: stg_job_skills
+    description: >
+      Staging model for raw job skills data.
+      Cleans skill keywords by trimming leading and trailing whitespace.
+      One row per job and associated skill.
+
+    columns:
+      - name: job_id
+        description: Unique identifier for each job posting.
+
+      - name: skill_id
+        description: Unique identifier for each skill.
+
+      - name: skill_keyword
+        description: Skill keyword associated with the job posting, with leading and trailing whitespace removed.

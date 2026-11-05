@@ -3,3 +3,20 @@ profile: databricks
 clean-targets:
 - "target"
 - "dbt_packages"
+
+models:
+  analytics:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    staging:
+      +materialized: view
+      +schema: staging
+
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+
+    marts:
+      +materialized: table

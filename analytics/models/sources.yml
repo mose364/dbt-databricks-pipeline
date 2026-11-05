@@ -1,0 +1,9 @@
+sources:
+  - name: jobs
+    database: raw
+    schema: jobs 
+    tables:
+     - name: raw_job_postings
+       description: one row per posting per script event.
+     - name: raw_job_skills
+    description: one row per (job,skill) pair extracted from the postings.
