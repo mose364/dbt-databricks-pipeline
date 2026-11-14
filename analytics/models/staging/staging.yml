@@ -33,6 +33,15 @@ models:
       - name: job_salary
         description: Advertised salary or salary range for the job.
 
+      - name: salary_min
+        description: Minimum salary advertised for the job posting.
+
+      - name: salary_max
+        description: Maximum salary advertised for the job posting.
+
+      - name: salary_avg
+        description: Average salary calculated from the minimum and maximum salary.
+
       - name: job_schedule_type
         description: Employment schedule such as full-time, part-time, or contract.
 
