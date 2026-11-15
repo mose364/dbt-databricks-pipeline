@@ -8,6 +8,8 @@ models:
     columns:
       - name: job_id
         description: Unique identifier for each job posting.
+        data_tests:
+          - not_null
 
       - name: job_title
         description: Title of the job posting.
@@ -35,16 +37,25 @@ models:
 
       - name: salary_min
         description: Minimum salary advertised for the job posting.
+        data_tests:
+          - non_negative
 
       - name: salary_max
         description: Maximum salary advertised for the job posting.
+        data_tests:
+          - non_negative
 
       - name: salary_avg
         description: Average salary calculated from the minimum and maximum salary.
 
       - name: job_schedule_type
         description: Employment schedule such as full-time, part-time, or contract.
-
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Part-time','Full-time','Contractor','Internship']
+              config:
+                severity: warn
       - name: is_remote
         description: Indicates whether the job allows remote work.
 
@@ -68,7 +79,10 @@ models:
 
       - name: search_term
         description: Keyword or phrase used to search for job postings.
-
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Data Engineer','Data Analyst','Data Scientist']
       - name: search_location
         description: Location parameter used during the job search.
 

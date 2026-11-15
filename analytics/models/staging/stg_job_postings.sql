@@ -10,7 +10,7 @@
 WITH source AS (
     SELECT *
     FROM {{ source('jobs', 'raw_job_postings') }}
-    WHERE error IS NOT TRUE
+    WHERE error IS NOT TRUE and job_id IS NOT NULL
 ),
 
 cleaned AS (
