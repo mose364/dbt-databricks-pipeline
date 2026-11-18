@@ -23,11 +23,11 @@ models:
         description: Employer, trimmed upstream; natural key into dim_company.
       - name: job_location
         description: Location text as posted.
-      - name: source_platform
+      - name: job_source
         description: Posting platform; the scraper's "via " prefix stripped upstream.
       - name: job_schedule_type
         description: Schedule as posted; null when the posting didn't say.
-      - name: job_work_from_home
+      - name: is_remote
         description: True when the posting is flagged remote.
       - name: search_date
         description: Date of the winning (latest) scrape; the incremental high-water mark.
